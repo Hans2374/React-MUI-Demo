@@ -11,7 +11,15 @@ export const MuiRating = () => {
     }
     return (
         <Stack spacing={2}>
-            <Rating value={value} onChange={handleChange} precision={0.5} size='large' icon={<FavoriteIcon fontSize="inherit" color="error" />} emptyIcon={<FavoriteBorderIcon fontSize="inherit" />} highlightSelectedOnly />
+            <Rating
+                value={value}
+                onChange={handleChange}
+                precision={0.5}
+                size='large'
+                icon={<FavoriteIcon fontSize="inherit" color="error" />}
+                emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                highlightSelectedOnly
+            />
         </Stack>
     )
 }

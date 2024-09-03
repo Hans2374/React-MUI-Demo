@@ -16,7 +16,14 @@ export const MuiTextField = () => {
             </Stack>
 
             <Stack direction='row' spacing={2}>
-                <TextField label='Form Input' required value={value} onChange={e => setValue(e.target.value)} error={!value} helperText={!value ? 'Required' : 'Do not share your password with anyone'} />
+                <TextField
+                    label='Form Input'
+                    required
+                    value={value}
+                    onChange={e => setValue(e.target.value)}
+                    error={!value}
+                    helperText={!value ? 'Required' : 'Do not share your password with anyone'}
+                />
                 <TextField label='Password' type="password" helperText='Do not share password with anyone' disabled />
                 <TextField label='Read only' InputProps={{ readOnly: true }} />
             </Stack>

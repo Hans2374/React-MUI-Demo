@@ -47,7 +47,13 @@ export const MuiButton = () => {
             </Stack>
 
             <Stack direction="row">
-                <ButtonGroup variant="contained" orientation="vertical" size="small" color="secondary" aria-label='alignment button group'>
+                <ButtonGroup
+                    variant="contained"
+                    orientation="vertical"
+                    size="small"
+                    color="secondary"
+                    aria-label='alignment button group'
+                >
                     <Button onClick={() => alert('Left clicked')}>Left</Button>
                     <Button>Center</Button>
                     <Button>Right</Button>
@@ -55,7 +61,15 @@ export const MuiButton = () => {
             </Stack>
 
             <Stack direction='row'>
-                <ToggleButtonGroup aria-label="text formatting" value={formats} onChange={handleFormatChange} size="small" color="success" orientation="vertical" exclusive>
+                <ToggleButtonGroup
+                    aria-label="text formatting"
+                    value={formats}
+                    onChange={handleFormatChange}
+                    size="small"
+                    color="success"
+                    orientation="vertical"
+                    exclusive
+                >
                     <ToggleButton value='bold' aria-label='bold'><FormatBoldIcon /></ToggleButton>
                     <ToggleButton value='italic' aria-label='italic'><FormatItalicIcon /></ToggleButton>
                     <ToggleButton value='underlined' aria-label='underlined'><FormatUnderlinedIcon /></ToggleButton>

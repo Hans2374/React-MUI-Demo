@@ -9,7 +9,13 @@ export const MuiSwitch = () => {
   }
   return (
     <Box>
-      <FormControlLabel label='Dark mode' control={<Switch checked={checked} onChange={handleChange} size="small" color="success" />} />
+      <FormControlLabel
+        label='Dark mode'
+        control={<Switch checked={checked}
+          onChange={handleChange}
+          size="small"
+          color="success" />}
+      />
     </Box>
   )
 }

@@ -12,7 +12,7 @@ export const MuiCheckbox = () => {
     }
     const handleSkillChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const index = skills.indexOf(event.target.value)
-        if(index === -1) {
+        if (index === -1) {
             setSkills([...skills, event.target.value])
         } else {
             setSkills(skills.filter((skill) => skill !== event.target.value))
@@ -21,7 +21,10 @@ export const MuiCheckbox = () => {
     return (
         <Box>
             <Box>
-                <FormControlLabel label='I accept terms and conditions' control={<Checkbox size='small' color="secondary" checked={acceptTnC} onChange={handleChange} />} />
+                <FormControlLabel
+                    label='I accept terms and conditions'
+                    control={<Checkbox size='small' color="secondary" checked={acceptTnC} onChange={handleChange} />}
+                />
             </Box>
             <Box>
                 <Checkbox icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} checked={acceptTnC} onChange={handleChange} />
@@ -30,9 +33,21 @@ export const MuiCheckbox = () => {
                 <FormControl error>
                     <FormLabel>Skills</FormLabel>
                     <FormGroup row>
-                        <FormControlLabel label='HTML' value='html' control={<Checkbox checked={skills.includes('html')} onChange={handleSkillChange} />} />
-                        <FormControlLabel label='CSS' value='css' control={<Checkbox checked={skills.includes('css')} onChange={handleSkillChange} />} />
-                        <FormControlLabel label='JavaScript' value='javascript' control={<Checkbox checked={skills.includes('javascript')} onChange={handleSkillChange} />}/>
+                        <FormControlLabel
+                            label='HTML'
+                            value='html'
+                            control={<Checkbox checked={skills.includes('html')} onChange={handleSkillChange} />}
+                        />
+                        <FormControlLabel
+                            label='CSS'
+                            value='css'
+                            control={<Checkbox checked={skills.includes('css')} onChange={handleSkillChange} />}
+                        />
+                        <FormControlLabel
+                            label='JavaScript'
+                            value='javascript'
+                            control={<Checkbox checked={skills.includes('javascript')} onChange={handleSkillChange} />}
+                        />
                     </FormGroup>
                     <FormHelperText>Invalid selection</FormHelperText>
                 </FormControl>
